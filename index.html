@@ -41,11 +41,11 @@ footer{text-align:center;color:var(--mute);padding:2rem;border-top:1px solid var
   <div>
     <h1>Chrysalis</h1>
     <p>2096년, 멸망한 지구의 기록</p>
-    <a href="#start">열람하기</a>
+    <a href="#start" id="open">열람하기</a>
   </div>
 </header>
 
-<main id="start">
+<main id="start" hidden>
 
 <section>
 <img class="shot" src="01_chrysalis.png" alt="Earth">
@@ -207,5 +207,12 @@ footer{text-align:center;color:var(--mute);padding:2rem;border-top:1px solid var
 
 <footer>Chrysalis · philrose</footer>
 
-</body>
+</body><script>
+document.getElementById('open').addEventListener('click',function(e){
+  e.preventDefault();
+  var m=document.getElementById('start');
+  m.hidden=false;
+  m.scrollIntoView({behavior:'smooth'});
+});
+</script>
 </html>
