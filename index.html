@@ -210,9 +210,9 @@ footer{text-align:center;color:var(--mute);padding:2rem;border-top:1px solid var
 <script>
 document.getElementById('open').addEventListener('click',function(e){
   e.preventDefault();
-  var m=document.getElementById('start');
-  m.hidden=false;
-  m.scrollIntoView({behavior:'smooth'});
+    document.querySelector('.hero').style.display='none';
+  document.getElementById('start').hidden=false;
+  window.scrollTo(0,0);
 });
 </script>
 
